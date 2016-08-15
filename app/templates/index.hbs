@@ -4,7 +4,7 @@ We hope you find exactly what you're looking for in a place to stay.
 
 <div class="announcements">
   {{#each announcements as |announcement|}}
-    {{ announcement-tile announcement=announcement }}
+    {{ announcement-tile announcement=announcement destroyAnnouncement="destroyAnnouncement"}}
   {{/each}}
 </div>
 
