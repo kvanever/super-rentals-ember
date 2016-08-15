@@ -2,7 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('rental');
+    return Ember.RSVP.hash({
+      rentals: this.store.findAll('rental'),
+      announcements: this.store.findAll('announcement')
+    });
+  },
+  setupController(controller, model) {
+    this._super(...arguments);
+    Ember.set(controller, 'rentals', model.rentals);
+    Ember.set(controller, 'announcements', model.announcements);
   },
   actions: {
     destroyRental(rental) {

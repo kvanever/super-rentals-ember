@@ -1,0 +1,5 @@
+{ "announcements": [{
+    "text": "Alert this is important!",
+    "category": "Weather"
+  }]
+}
