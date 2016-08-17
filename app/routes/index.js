@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  updateRentalForm: false,
   model() {
     return Ember.RSVP.hash({
       rentals: this.store.findAll('rental'),
@@ -27,7 +28,6 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     update(rental, params) {
-      debugger;
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
           rental.set(key,params[key]);
