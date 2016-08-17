@@ -18,14 +18,15 @@ module.exports = function(environment) {
       // when it is created
     },
     firebase: {
-      apiKey: "AIzaSyCyhcPMMdsAsU0uHw8ff4FXE1DpcAZ0ALU",
-      authDomain: "super-rental-86bf1.firebaseapp.com",
-      databaseURL: "https://super-rental-86bf1.firebaseio.com",
-      storageBucket: "super-rental-86bf1.appspot.com",
+      apiKey: process.env.apiKey,
+      authDomain: "epicodus-ember-js-rental.firebaseapp.com",
+      databaseURL: "https://epicodus-ember-js-rental.firebaseio.com",
+      storageBucket: "epicodus-ember-js-rental.appspot.com",
     }
   };
 
   if (environment === 'development') {
+    ENV.myApiKey = process.env.apiKey;
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
