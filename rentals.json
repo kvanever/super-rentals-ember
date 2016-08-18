@@ -20,5 +20,8 @@
   "announcements": [{
     "text": "Alert this is important!",
     "category": "Weather"
+  }],
+  "cities": [{
+    "name": "New Orleans"
   }]
 }
